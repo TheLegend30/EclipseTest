@@ -2,18 +2,14 @@ package application;
 
 public class App {
 	public static void main(String[] args) {
-		new HelloClass("Pedro").sayHello();
+		HelloClass.sayHello("Mateo");
 	}
 }
 
 class HelloClass {
-	private String name;
+	private HelloClass() {}
 	
-	public HelloClass(String name) {
-		this.name = name;
-	}
-	
-	public void sayHello() {
+	public static void sayHello(String name) {
 		System.out.println("Hello, " + name);
 	}
 }
